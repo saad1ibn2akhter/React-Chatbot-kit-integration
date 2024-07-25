@@ -10,7 +10,9 @@ class MessageParser {
         console.log(this.state);
         const lowercase = message.toLowerCase();
         if (lowercase.includes('hello mate')) {
-            console.log('guten tag!')
+            this.actionProvider.helloWorldHandler();
+        }else{
+            this.actionProvider.errorResponseHandler();
         }
     }
 }
