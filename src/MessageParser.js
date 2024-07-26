@@ -11,7 +11,13 @@ class MessageParser {
         const lowercase = message.toLowerCase();
         if (lowercase.includes('hello mate')) {
             this.actionProvider.helloWorldHandler();
-        }else{
+        }
+
+        else if(lowercase.includes('who are you')){
+            this.actionProvider.idHandler();
+        }
+        
+        else{
             this.actionProvider.errorResponseHandler();
         }
     }
